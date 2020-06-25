@@ -6,7 +6,7 @@
     .then(res => res.json())
     .then(data => data.data.children.map(data => data.data))
     .catch(err => console.log(err));
-}
+};
 
  // Search reddit
  search()
@@ -40,6 +40,4 @@ function truncateText(text, limit) {
     const shortened = text.indexOf('', limit);
     if (shortened === -1) return text;
     return text.substring(0, shortened);
-
-
-}
+};
