@@ -18,3 +18,7 @@
 .bottom-text{
     margin-bottom: 10px;
 }
+
+.nav-link:hover {
+    cursor: pointer;
+}
