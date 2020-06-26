@@ -11,7 +11,7 @@
     color: red;
 }
 
-#nav-link {
+.black-text {
     color: black;
 }
 
@@ -21,4 +21,5 @@
 
 .nav-link:hover {
     cursor: pointer;
+    
 }
