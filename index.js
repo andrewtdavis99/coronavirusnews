@@ -32,10 +32,11 @@ var home = "";
         output += '</div> ';
         document.getElementById('results').innerHTML = output;
     });
-    var tablist = document.querySelectorAll("a");
-    var element = document.getElementById("hot");
-    tablist.classList.remove("active");
+    const tablist = document.querySelector(".tabToggle");
+    const element = document.getElementById("hot");
+    
     element.classList.add("active");
+    
     e.preventDefault();
    });
 
