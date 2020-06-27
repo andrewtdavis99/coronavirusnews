@@ -1,5 +1,8 @@
-// Select API feed by region and new and top 
-document.getElementById("ulNode").addEventListener("click", function (e) {
+
+
+// Select API feed by country or region  
+document.querySelectorAll(".country").forEach(item => {
+item.addEventListener("click", function (e) {
     console.log(e.target.id);
     let region = e.target.id;
     search(region)
@@ -27,10 +30,15 @@ document.getElementById("ulNode").addEventListener("click", function (e) {
             document.getElementById('results').innerHTML = output;
         });
 
+        $('#navbarNav').removeClass('show');
+        $('#new').removeClass("active");
+        $('#hot').addClass("active");
 
-    e.preventDefault();
-
+        e.preventDefault();
+    });
 });
+
+// Select API feed by trending and new
 
 document.getElementById("tabNode").addEventListener("click", function (e) {
     console.log(e.target);
@@ -60,23 +68,9 @@ document.getElementById("tabNode").addEventListener("click", function (e) {
             document.getElementById('results').innerHTML = output;
 
         });
-    e.preventDefault();
+    
 });
 
-
-
-
-
-closeNav();
-  
-// Function to close the nav bar after selection in made and to To change the tab active class back to news feed
-function closeNav() {
-    $('#ulNode').on('click', function () {
-        $('#navbarNav').removeClass('show');
-        $('#new').removeClass("active");
-        $('#hot').addClass("active");
-    });
-}
 
 // API Fetch
 function search(searchTerm = "coronavirus", top = "") {
@@ -111,7 +105,10 @@ search()
         })
         output += '</div> ';
         document.getElementById('results').innerHTML = output;
+        e.preventDefault();
     });
+
+    
 
 // Truncate text
 
