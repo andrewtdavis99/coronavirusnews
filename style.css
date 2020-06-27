@@ -13,10 +13,12 @@
 
 .black-text {
     color: black;
+    
 }
 
 .bottom-text{
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .nav-link:hover {

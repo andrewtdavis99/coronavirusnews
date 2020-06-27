@@ -1,22 +1,16 @@
-
-var newsType = "coronavirus" ;
-var home = "";
-
-
-
-    // Select API feed by region and new and top 
-   document.getElementById("ulNode").addEventListener("click", function(e){
-    console.log(e.target);
+// Select API feed by region and new and top 
+document.getElementById("ulNode").addEventListener("click", function (e) {
+    console.log(e.target.id);
     let region = e.target.id;
     search(region)
-    .then(results => {
-        console.log(results)
-        let output = '<div class="row">';
-        // Loop through
-        results.slice(2).forEach(post => {
-            // Check for image
-            const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
-            output += `
+        .then(results => {
+            console.log(results)
+            let output = '<div class="row">';
+            // Loop through
+            results.slice(2).forEach(post => {
+                // Check for image
+                const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
+                output += `
             <div class="col-lg-6 col-md-6 mb-4">
            <div class="card">
             <img src="${image}" class="card-img-top" alt="..." style ="max-height: 285px;">
@@ -28,30 +22,28 @@ var home = "";
             </div>
             </div>
            `;
-        })
-        output += '</div> ';
-        document.getElementById('results').innerHTML = output;
-    });
-    const tablist = document.querySelector(".tabToggle");
-    const element = document.getElementById("hot");
-    
-    element.classList.add("active");
-    
-    e.preventDefault();
-   });
+            })
+            output += '</div> ';
+            document.getElementById('results').innerHTML = output;
+        });
 
-   document.getElementById("tabNode").addEventListener("click", function(e){
+
+    e.preventDefault();
+
+});
+
+document.getElementById("tabNode").addEventListener("click", function (e) {
     console.log(e.target);
     let cat = e.target.id;
     search(newsType, cat)
-    .then(results => {
-        console.log(results)
-        let output = '<div class="row">';
-        // Loop through
-        results.slice(2).forEach(post => {
-            // Check for image
-            const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
-            output += `
+        .then(results => {
+            console.log(results)
+            let output = '<div class="row">';
+            // Loop through
+            results.slice(2).forEach(post => {
+                // Check for image
+                const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
+                output += `
             <div class="col-lg-6 col-md-6 mb-4">
            <div class="card">
             <img src="${image}" class="card-img-top" alt="..." style ="max-height: 285px;">
@@ -63,34 +55,48 @@ var home = "";
             </div>
             </div>
            `;
-        })
-        output += '</div> ';
-        document.getElementById('results').innerHTML = output;
-    });
-    e.preventDefault();
-   });
+            })
+            output += '</div> ';
+            document.getElementById('results').innerHTML = output;
 
-   
+        });
+    e.preventDefault();
+});
+
+
+
+
+
+closeNav();
+  
+// Function to close the nav bar after selection in made and to To change the tab active class back to news feed
+function closeNav() {
+    $('#ulNode').on('click', function () {
+        $('#navbarNav').removeClass('show');
+        $('#new').removeClass("active");
+        $('#hot').addClass("active");
+    });
+}
 
 // API Fetch
- function search(searchTerm = "coronavirus", top = "") {
+function search(searchTerm = "coronavirus", top = "") {
     return fetch(`https://www.reddit.com/r/${searchTerm}/${top}.json?limit=100`)
-    .then(newsType = searchTerm)
-    .then(res => res.json())
-    .then(data => data.data.children.map(data => data.data))
-    .catch(err => console.log(err));
+        .then(newsType = searchTerm)
+        .then(res => res.json())
+        .then(data => data.data.children.map(data => data.data))
+        .catch(err => console.log(err));
 };
 
- // Search reddit
- search(newsType, home)
- .then(results => {
-     console.log(results)
-     let output = '<div class="row">';
-     // Loop through
-     results.slice(2).forEach(post => {
-         // Check for image
-         const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
-         output += `
+// Search reddit
+search()
+    .then(results => {
+        console.log(results)
+        let output = '<div class="row">';
+        // Loop through
+        results.slice(2).forEach(post => {
+            // Check for image
+            const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
+            output += `
          <div class="col-lg-6 col-md-6 mb-4">
         <div class="card">
          <img src="${image}" class="card-img-top" alt="..." style ="max-height: 285px;">
@@ -102,10 +108,10 @@ var home = "";
          </div>
          </div>
         `;
-     })
-     output += '</div> ';
-     document.getElementById('results').innerHTML = output;
- });
+        })
+        output += '</div> ';
+        document.getElementById('results').innerHTML = output;
+    });
 
 // Truncate text
 
@@ -114,6 +120,3 @@ function truncateText(text, limit) {
     if (shortened === -1) return text;
     return text.substring(0, shortened);
 };
-
-
-
