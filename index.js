@@ -32,6 +32,10 @@ var home = "";
         output += '</div> ';
         document.getElementById('results').innerHTML = output;
     });
+    var tablist = document.querySelectorAll("a");
+    var element = document.getElementById("hot");
+    tablist.classList.remove("active");
+    element.classList.add("active");
     e.preventDefault();
    });
 
