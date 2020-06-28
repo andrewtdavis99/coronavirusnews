@@ -6,6 +6,21 @@
     text-align: center;
 }
 
+#navPhoto {
+    border-radius: 25px;
+    opacity: .5;
+}
+
+.h1-container {
+    text-align: center;   
+}
+
+#navTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    margin: 20px auto;
+}
+
 
 #titleC {
     color: red;
@@ -21,7 +36,37 @@
     margin-right: 10px;
 }
 
-.nav-link:hover {
-    cursor: pointer;
-    
+#nhsPtag {
+    font-size: 12px;
 }
+
+#adviceTitle {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px auto;
+    font-size: 32px;
+}
+
+.advice {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.advice h1 {
+    margin-bottom: 18px;
+}
+
+.advice p {
+    width: 70%;
+}
+
+.advice li {
+    width: 70%;
+    margin-bottom: 5px;
+}
+
+footer {
+    height: 60px;
+    text-align: center;
+    padding: 3px;
+    background-color: grey;
+    color: white;
+  }

@@ -4,28 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Coronavirus news updates feed and aticles of all covid-19, coronavirus pandemic information.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script data-ad-client="ca-pub-2748180882292021" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <title>Coronavirus News Feed</title>
+</head>
 
 <body>
     <!-- Image and text -->
     <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom mb-3">
         <span class="navbar-brand pl-3 text-secondary">
-            <img src="https://cdn.pixabay.com/photo/2016/04/02/21/01/world-1303628_960_720.png" height="35"
-                class="d-inline-block align-top mr-2 p-0" alt="coronavirus covid-19 world pic" loading="lazy">
-            <span id="titleC">C</span>oronavirus <span>N</span>ews <span>F</span>eed
+            <img id="navPhoto" src="https://cdn.pixabay.com/photo/2017/06/14/08/20/map-of-the-world-2401458_960_720.jpg"
+                height="45" class="d-inline-block align-top mr-2 mb-1 p-0" alt="coronavirus covid-19 world pic"
+                loading="lazy">
         </span>
 
+
+
         <button class="navbar-toggler navbar-light navbar-left" type="button" data-toggle="collapse"
-            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul  class="navbar-nav float-right  ml-auto pr-1">
+            <ul class="navbar-nav float-right  ml-auto pr-1">
                 <li class="nav-item country">
                     <a id="coronavirus" class="nav-link md-py-2 md-px-3" href="">Home
                     </a>
@@ -38,40 +45,48 @@
                         Canada
                     </a>
                 </li>
-                <li  class="nav-item country">
+                <li class="nav-item country">
                     <a id="coronavirusDownUnder" class="nav-link  md-py-2 md-px-3" href="">
                         Australia
                     </a>
                 </li>
-                <li  class="nav-item country">
+                <li class="nav-item country">
                     <a id="coronavirusDACH" class="nav-link bottom-text  md-py-2 md-px-3" href="">
                         Germany
                     </a>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown pb-1 md-mt-3 md-py-1 md-px-2">
-                        <a class="btn btn-outline-secondary dropdown-toggle mt-1 md-mt-3 text-secondary " href="" 
+                        <a class="btn btn-outline-secondary dropdown-toggle mt-1 md-mt-3 text-secondary " href=""
                             id="dropdownMenuLink " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             USA Regions
-                    </a>
+                        </a>
 
-                        <div  class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
-                            <a id="coronavirusNewYork" class="dropdown-item text-secondary country" href="#">New York</a>
+                        <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
+                            <a id="coronavirusNewYork" class="dropdown-item text-secondary country" href="#">New
+                                York</a>
                             <a id="coronavirusCA" class="dropdown-item text-secondary country" href="#">California</a>
                             <a id="coronavirusWA" class="dropdown-item text-secondary country" href="#">Washington</a>
-                            <a id="coronavirusMichigan" class="dropdown-item text-secondary country" href="#">Michigan</a>
+                            <a id="coronavirusMichigan" class="dropdown-item text-secondary country"
+                                href="#">Michigan</a>
                             <a id="coronavirusKansas" class="dropdown-item text-secondary country" href="#">Kansas</a>
                             <a id="Floridacoronavirus" class="dropdown-item text-secondary country" href="#">Florida</a>
                             <a id="coronavirusMN" class="dropdown-item text-secondary country" href="#">Minnesota</a>
-                            <a id="coronavirusOklahoma" class="dropdown-item text-secondary country" href="#">Oklahoma</a>
-                            <a id="coronavirusLouisiana" class="dropdown-item text-secondary country" href="#">Louisiana</a>
-                            <a id="coronavirusNE" class="dropdown-item text-secondary country" href="#">North East USA</a>
-                            <a id="coronavirusSouth" class="dropdown-item text-secondary country" href="#">Southern USA</a>
+                            <a id="coronavirusOklahoma" class="dropdown-item text-secondary country"
+                                href="#">Oklahoma</a>
+                            <a id="coronavirusLouisiana" class="dropdown-item text-secondary country"
+                                href="#">Louisiana</a>
+                            <a id="coronavirusNE" class="dropdown-item text-secondary country" href="#">North East
+                                USA</a>
+                            <a id="coronavirusSouth" class="dropdown-item text-secondary country" href="#">Southern
+                                USA</a>
                             <a id="coronavirusTX" class="dropdown-item text-secondary country" href="#">Texas</a>
-                            <a id="coronavirusIllinois" class="dropdown-item text-secondary country" href="#">Illinois</a>
+                            <a id="coronavirusIllinois" class="dropdown-item text-secondary country"
+                                href="#">Illinois</a>
                             <a id="coronavirusWI" class="dropdown-item text-secondary country" href="#">Wisconsin</a>
                             <a id="coronavirusGA" class="dropdown-item text-secondary country" href="#">Georgia</a>
-                            <a id="coronavirusSouth" class="dropdown-item text-secondary country" href="#">Southern USA</a>
+                            <a id="coronavirusSouth" class="dropdown-item text-secondary country" href="#">Southern
+                                USA</a>
                             <a id="coronavirus_KY" class="dropdown-item text-secondary country" href="#">Kentucky</a>
                             <a id="coronavirusAZ" class="dropdown-item text-secondary country" href="#">Arizona</a>
                             <a id="covid19_Ohio" class="dropdown-item text-secondary country" href="#">Ohio</a>
@@ -85,21 +100,220 @@
     <div class="advert">
         <p>AD</p>
     </div>
-
+    <div class="h1-container">
+        <h1 id="navTitle"><span id="titleC">C</span>oronavirus <span>N</span>ews <span>F</span>eed</h1>
+    </div>
     <ul id="tabNode" class="nav nav-tabs  justify-content-center mt-4 mb-3">
         <li class="nav-item">
-          <a id="hot" class="nav-link text-secondary active" href="" data-toggle="tab">Trending
-        </span></a>
+            <a id="hot" class="nav-link text-secondary active" href="" data-toggle="tab">Trending
+                </span></a>
         </li>
         <li class="nav-item">
-          <a id="new" class="nav-link text-secondary" href="" data-toggle="tab">New</span></a>
+            <a id="new" class="nav-link text-secondary" href="" data-toggle="tab">New</span></a>
         </li>
-      </ul>
+    </ul>
 
     <div id="search-container" class="container">
 
         <div id="results"></div>
     </div>
+
+    <div class="h1-container">
+        <h1 id="adviceTitle">Guidance And Advice From Medical Professionals At The NHS</h1>
+        <p id="nhsPtag">Taken from the NHS website</p>
+    </div>
+
+    <ul class="nav nav-tabs justify-content-center mt-5 mb-3 " id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active text-secondary" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">Symptoms</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link text-secondary" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false">People At High Risk</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link text-secondary" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                aria-selected="false">Social Distancing</a>
+        </li>
+    </ul>
+    <div class="tab-content advice m-4" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h1>Check if you or your child has coronavirus symptoms</h1>
+            <p>If you have any of the main symptoms of coronavirus (COVID-19), you must stay at home (self-isolate) and
+                get a test.<p>
+
+            <h2>Main symptoms</h2>
+            <h4>The main symptoms of coronavirus are:</h4>
+            <ul>
+                <li>a high temperature – this means you feel hot to touch on your chest or back (you do not need to
+                    measure your temperature)</li>
+                <li>a new, continuous cough – this means coughing a lot for more than an hour, or 3 or more coughing
+                    episodes in 24 hours (if you usually have a cough, it may be worse than usual)</li>
+                <li>a loss or change to your sense of smell or taste – this means you've noticed you cannot smell or
+                    taste anything, or things smell or taste different to normal</li>
+            </ul>
+            <p></p>Most people with coronavirus have at least 1 of these symptoms.</p>
+
+            <h2>What to do if you have symptoms</h2>
+            <h4>If you have any of the main symptoms of coronavirus:</h4>
+            <ul>
+                <li>Stay at home (self-isolate) – do not leave your home or have visitors. Anyone you live with, and
+                    anyone in your support bubble, must also self-isolate.</li>
+                <li>Get a test – get a test to check if you have coronavirus as soon as possible. Anyone you live with,
+                    and anyone in your support bubble, should also get a test if they have symptoms.</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade advice m-4" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <h1>Who's at higher risk from coronavirus</h1>
+            <h3>Coronavirus (COVID-19) can make anyone seriously ill. But for some people, the risk is higher.</h3>
+
+            <p>There are 2 levels of higher risk:</p>
+            <ul>
+                <li>high risk (clinically extremely vulnerable)</li>
+                <li>moderate risk (clinically vulnerable)</li>
+            </ul>
+
+            <h4>Important</h4>
+            <p>The lists below may not include everyone who's at higher risk from coronavirus and may change as we learn
+                more about the virus.</p>
+
+            <h2>People at high risk (clinically extremely vulnerable)</h2>
+            <p>People at high risk from coronavirus include people who:</p>
+
+            <ul>
+                <li>have had an organ transplant</li>
+                <li>are having chemotherapy or antibody treatment for cancer, including immunotherapy</li>
+                <li>are having an intense course of radiotherapy (radical radiotherapy) for lung cancer</li>
+                <li>are having targeted cancer treatments that can affect the immune system (such as protein kinase
+                    inhibitors or PARP inhibitors)</li>
+                <li>have a serious heart condition and are pregnant</li>
+                <li>are taking medicine that makes them much more likely to get infections (such as high doses of
+                    steroids or immunosuppressant medicine)</li>
+                <li>have a condition that means they have a very high risk of getting infections (such as SCID or sickle
+                    cell)</li>
+                <li>have been told by a doctor they have a severe lung condition (such as cystic fibrosis, severe asthma
+                    or severe COPD)</li>
+                <li>have had a bone marrow or stem cell transplant in the past 6 months, or are still taking
+                    immunosuppressant medicine</li>
+                <li>have blood or bone marrow cancer (such as leukaemia, lymphoma or myeloma)</li>
+            </ul>
+
+            <h2>People at moderate risk (clinically vulnerable)</h2>
+            <p>People at moderate risk from coronavirus include people who:</p>
+
+
+            <ul>
+                <li>are 70 or older</li>
+                <li>have a lung condition that's not severe (such as asthma, COPD, emphysema or bronchitis)</li>
+                <li>have heart disease (such as heart failure)</li>
+                <li>have diabetes</li>
+                <li>have chronic kidney disease</li>
+                <li>are pregnant</li>
+                <li>are very obese (a BMI of 40 or above)</li>
+                <li>are taking medicine that can affect the immune system (such as low doses of steroids)</li>
+                <li>have a condition that means they have a high risk of getting infections</li>
+                <li>have a condition affecting the brain or nerves (such as Parkinson's disease, motor neurone disease,
+                    multiple sclerosis or cerebral palsy)</li>
+                <li>have liver disease (such as hepatitis)</li>
+            </ul>
+
+
+            <h2>What to do if you're at moderate risk</h2>
+            <p>If you're at moderate risk from coronavirus, you can go out to work (if you cannot work from home) and
+                for things like getting food or exercising. But you should try to stay at home as much as possible.</p>
+
+            <p>It's very important you follow the general advice on social distancing, including staying at least 2
+                metres (3 steps) away from anyone you do not live with.</p>
+
+            <h2>Other things that can affect your risk</h2>
+            <p>A report by Public Health England found that other things might also mean you are more likely to get
+                seriously ill from coronavirus.</p>
+
+            <ul>
+                <li>having certain jobs, such as nurse, taxi driver and security guard</li>
+                <li>where in the country you live – the risk is higher in poorer areas</li>
+                <li>living in a care home</li>
+                <li>being from a Black, Asian or minority ethnic background</li>
+                <li>being a man</li>
+                <li>your age – your risk increases as you get older</li>
+            </ul>
+
+
+
+        </div>
+        <div class="tab-pane fade advice m-4" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <h1>Social distancing and changes to everyday life</h1>
+            <h5>Advice about avoiding close contact with other people (social distancing), looking after your wellbeing
+            </h5>
+            <h2>Social distancing: what you need to do</h2>
+            <p>To stop the spread of coronavirus (COVID-19), you should avoid close contact with anyone you do not live
+                with.</p>
+
+            <p>This is called social distancing.</p>
+
+
+            <h3>How to avoid spreading the infection</h3>
+            <p>It's very important to do what you can to reduce the risk of you and other people getting ill with
+                coronavirus.</p>
+
+            <p>You can spread the virus even if you do not have symptoms.</p>
+
+            <h3>Do</h3>
+
+            <ul>
+                <li>wash your hands as soon as you get home</li>
+                <li>use hand sanitiser gel if soap and water are not available</li>
+                <li>wash your hands with soap and water often – do this for at least 20 seconds</li>
+                <li>stay at least 2 metres (3 steps) away from anyone you do not live with (or anyone not in your
+                    support bubble) when outside your home</li>
+                <li>cover your mouth and nose with a tissue or your sleeve (not your hands) when you cough or sneeze
+                </li>
+                <li>put used tissues in the bin immediately and wash your hands afterwards</li>
+            </ul>
+
+            <h3>Dont</h3>
+            <ul>
+                <li>do not touch your eyes, nose or mouth if your hands are not clean</li>
+            </ul>
+
+
+
+            <h3>Face coverings</h3>
+
+            <p>Wear something that covers your nose and mouth:</p>
+
+            <ul>
+                <li>on public transport</li>
+                <li>when you go to hospital appointments or visit someone in hospital</li>
+            </ul>
+
+            <p>If you can, also wear a face covering in other places when it's hard to stay away from people, such as in
+                shops.</p>
+
+            <p>Face coverings should not be worn by children under 3 and people who would find wearing them difficult
+                (such as people with breathing difficulties).</p>
+
+
+            <h3>Looking after your health and wellbeing</h3>
+            <p>To help yourself stay well while you're at home:</p>
+
+            <ul>
+                <li>stay in touch with family and friends over the phone or on social media</li>
+                <li>try to keep yourself busy – you could try activities like cooking, reading, online learning and
+                    watching films</li>
+                <li>do light exercise at home or outside</li>
+                <li>consider taking 10 micrograms of vitamin D each day if you're indoors most of the day – this is to
+                    keep your bones and muscles healthy</li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <footer>
+       <p>&copy; Copyright 2020</p> 
+      </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
