@@ -18,6 +18,11 @@
     margin: 20px auto;
 }
 
+.dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
 
 #titleC {
     color: red;
@@ -67,3 +72,36 @@ footer {
     background-color: grey;
     color: white;
   }
+
+.title {
+ 
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.card-text {
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid rgba(34, 36, 38, .1);
+    padding: 5px;
+}
+
+.card-block {
+    position: relative;
+    font-size: 1em;
+    position: relative;
+    margin:  auto  0;
+    text-emphasis: center;
+    padding: 1em;
+    border: none;
+    box-shadow: none;   
+}
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+

@@ -1,34 +1,32 @@
-
-
 // Select API feed by country or region  
 document.querySelectorAll(".country").forEach(item => {
-item.addEventListener("click", function (e) {
-    console.log(e.target.id);
-    let region = e.target.id;
-    search(region)
-        .then(results => {
-            console.log(results)
-            let output = '<div class="row">';
-            // Loop through
-            results.slice(2).forEach(post => {
-                // Check for image
-                const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
-                output += `
-            <div class="col-lg-6 col-md-6 mb-4">
-           <div class="card">
-            <img src="${image}" class="card-img-top" alt="..." style ="max-height: 285px;">
-            <div class="card-body">
-                <h6 class="card-title" style ="height: 96px;">${truncateText(post.title, 150)}</h6>
-               
-                <a href="${post.url}" target='_blank' class="btn btn-outline-secondary">Read More</a>
-            </div>
-            </div>
-            </div>
+    item.addEventListener("click", function (e) {
+        console.log(e.target.id);
+        let region = e.target.id;
+        search(region)
+            .then(results => {
+                console.log(results)
+                let output = '<div class="row">';
+                // Loop through
+                results.slice(2).forEach(post => {
+                    // Check for image
+                    const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
+                    output += `
+                    <div class="card-pic col-sm-3 mt-3">
+                    <img class="card w-100" src="${image}" alt="">
+                  </div>
+        
+                    <div class="card-text col-sm-9 sm-mt-3">
+                    <div class="card-block">
+                      <p>${truncateText(post.title, 150)}</p>
+                      <a href="${post.url}" class="btn  btn-sm btn-outline-secondary">Read More</a>
+                    </div>
+                  </div>
            `;
-            })
-            output += '</div> ';
-            document.getElementById('results').innerHTML = output;
-        });
+                })
+                output += '</div> ';
+                document.getElementById('results').innerHTML = output;
+            });
 
         $('#navbarNav').removeClass('show');
         $('#new').removeClass("active");
@@ -52,23 +50,23 @@ document.getElementById("tabNode").addEventListener("click", function (e) {
                 // Check for image
                 const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
                 output += `
-            <div class="col-lg-6 col-md-6 mb-4">
-           <div class="card">
-            <img src="${image}" class="card-img-top" alt="..." style ="max-height: 285px;">
-            <div class="card-body">
-                <h6 class="card-title" style ="height: 96px;">${truncateText(post.title, 150)}</h6>
-               
-                <a href="${post.url}" target='_blank' class="btn btn-outline-secondary">Read More</a>
-            </div>
-            </div>
-            </div>
+                <div class="card-pic col-sm-3 mt-3">
+                <img class="card w-100" src="${image}" alt="">
+              </div>
+    
+                <div class="card-text col-sm-9 sm-mt-3">
+                <div class="card-block">
+                  <p>${truncateText(post.title, 150)}</p>
+                  <a href="${post.url}" class="btn  btn-sm btn-outline-secondary">Read More</a>
+                </div>
+              </div>
            `;
             })
             output += '</div> ';
             document.getElementById('results').innerHTML = output;
 
         });
-    
+
 });
 
 
@@ -91,24 +89,24 @@ search()
             // Check for image
             const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
             output += `
-         <div class="col-lg-6 col-md-6 mb-4">
-        <div class="card">
-         <img src="${image}" class="card-img-top" alt="..." style ="max-height: 285px;">
-         <div class="card-body">
-             <h6 class="card-title" style ="height: 96px;">${truncateText(post.title, 150)}</h6>
-            
-             <a href="${post.url}" target='_blank' class="btn btn-outline-secondary">Read More</a>
-         </div>
-         </div>
-         </div>
+            <div class="card-pic col-sm-3 mt-3">
+            <img class="card w-100" src="${image}" alt="">
+          </div>
+
+            <div class="card-text col-sm-9 sm-mt-3">
+            <div class="card-block">
+              <p>${truncateText(post.title, 150)}</p>
+              <a href="${post.url}" class="btn  btn-sm btn-outline-secondary">Read More</a>
+            </div>
+          </div>
         `;
         })
         output += '</div> ';
         document.getElementById('results').innerHTML = output;
-        e.preventDefault();
+        // e.preventDefault();
     });
 
-    
+
 
 // Truncate text
 
