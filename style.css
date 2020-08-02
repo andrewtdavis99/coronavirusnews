@@ -9,13 +9,19 @@
 }
 
 .h1-container {
-    text-align: center;   
+    background-image: url(./image/virus-4999857_1280.png);
+    background-position: center center;
+    height: 60vh;  
 }
 
 #navTitle {
+    display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
-    margin: 20px auto;
+    text-align: center;
+    margin: auto;
+    padding-top:11%;
+    
 }
 
 .dropdown-menu {
@@ -42,9 +48,14 @@
     font-size: 12px;
 }
 
+.advice-container {
+    text-align: center;
+
+}
+
 #adviceTitle {
     font-family: 'Montserrat', sans-serif;
-    margin: 20px auto;
+    margin: 50px auto;
     font-size: 32px;
 }
 

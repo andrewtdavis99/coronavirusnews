@@ -11,19 +11,10 @@ document.querySelectorAll(".country").forEach(item => {
                 results.slice(2).forEach(post => {
                     // Check for image
                     const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
-                    output += `
-                    <div class="card-pic col-sm-3 mt-3">
-                    <img class="card w-100" src="${image}" alt="">
-                  </div>
-        
-                    <div class="card-text col-sm-9 sm-mt-3">
-                    <div class="card-block">
-                      <p>${truncateText(post.title, 150)}</p>
-                      <a href="${post.url}" class="btn  btn-sm btn-outline-secondary">Read More</a>
-                    </div>
-                  </div>
-           `;
-                })
+                    const postTitle = post.title;
+                    const url = post.url;
+                    output += cards(image, postTitle, url);
+                    })
                 output += '</div> ';
                 document.getElementById('results').innerHTML = output;
             });
@@ -49,18 +40,9 @@ document.getElementById("tabNode").addEventListener("click", function (e) {
             results.slice(2).forEach(post => {
                 // Check for image
                 const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
-                output += `
-                <div class="card-pic col-sm-3 mt-3">
-                <img class="card w-100" src="${image}" alt="">
-              </div>
-    
-                <div class="card-text col-sm-9 sm-mt-3">
-                <div class="card-block">
-                  <p>${truncateText(post.title, 150)}</p>
-                  <a href="${post.url}" class="btn  btn-sm btn-outline-secondary">Read More</a>
-                </div>
-              </div>
-           `;
+                const postTitle = post.title;
+                const url = post.url;
+                output += cards(image, postTitle, url);
             })
             output += '</div> ';
             document.getElementById('results').innerHTML = output;
@@ -88,18 +70,9 @@ search()
         results.slice(2).forEach(post => {
             // Check for image
             const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
-            output += `
-            <div class="card-pic col-sm-3 mt-3">
-            <img class="card w-100" src="${image}" alt="">
-          </div>
-
-            <div class="card-text col-sm-9 sm-mt-3">
-            <div class="card-block">
-              <p>${truncateText(post.title, 150)}</p>
-              <a href="${post.url}" class="btn  btn-sm btn-outline-secondary">Read More</a>
-            </div>
-          </div>
-        `;
+            const postTitle = post.title;
+            const url = post.url;
+            output +=   cards(image, postTitle, url);
         })
         output += '</div> ';
         document.getElementById('results').innerHTML = output;
@@ -114,4 +87,20 @@ function truncateText(text, limit) {
     const shortened = text.indexOf('', limit);
     if (shortened === -1) return text;
     return text.substring(0, shortened);
+};
+
+// Function for displaying API data in a card format
+function cards(image, postTitle, url) {
+  return `
+  <div class="card-pic col-sm-3 mt-3">
+  <img class="card w-100" src="${image}" alt="">
+</div>
+
+  <div class="card-text col-sm-9 sm-mt-3">
+  <div class="card-block">
+    <p>${truncateText(postTitle, 150)}</p>
+    <a href="${url}" class="btn  btn-sm btn-outline-secondary" target="_blank">Read More</a>
+  </div>
+</div>
+`
 };
