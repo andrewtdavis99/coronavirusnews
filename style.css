@@ -1,27 +1,25 @@
-.advert {
+
+
+ 
+ 
+
+/* .advert {
     margin: 20px auto;
     text-align: center;
-}
+} */
 
 #navPhoto {
     border-radius: 25px;
     opacity: .5;
 }
 
-.h1-container {
-    background-image: url(./image/virus-4999857_1280.png);
-    background-position: center center;
-    height: 60vh;  
-}
-
 #navTitle {
-    display: block;
+    display: inline-block;
     font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
     text-align: center;
-    margin: auto;
-    padding-top:11%;
-    
+    margin: auto;  
+    font-size: 15px;  
+    font-weight: bold;
 }
 
 .dropdown-menu {
@@ -100,7 +98,6 @@ footer {
 .card-block {
     position: relative;
     font-size: 1em;
-    position: relative;
     margin:  auto  0;
     text-emphasis: center;
     padding: 1em;
@@ -116,3 +113,18 @@ footer {
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
 }
 
+@media (min-width: 400px) { 
+    #navTitle {
+        font-size: 20px;
+    }
+
+
+  @media (min-width: 1100px) { 
+    #navTitle {
+        font-size: 30px;
+    }
+
+    #navPhoto {
+        height: 35px;
+    }
+   }

@@ -76,7 +76,7 @@ search()
         })
         output += '</div> ';
         document.getElementById('results').innerHTML = output;
-        // e.preventDefault();
+       
     });
 
 
