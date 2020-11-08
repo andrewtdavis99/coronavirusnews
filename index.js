@@ -1,6 +1,7 @@
 // Select API feed by country or region  
 document.querySelectorAll(".country").forEach(item => {
     item.addEventListener("click", function (e) {
+        e.preventDefault();
         console.log(e.target.id);
         let region = e.target.id;
         search(region)
@@ -23,13 +24,14 @@ document.querySelectorAll(".country").forEach(item => {
         $('#new').removeClass("active");
         $('#hot').addClass("active");
 
-        e.preventDefault();
+        
     });
 });
 
 // Select API feed by trending and new
 
 document.getElementById("tabNode").addEventListener("click", function (e) {
+    e.preventDefault();
     console.log(e.target);
     let cat = e.target.id;
     search(newsType, cat)
