@@ -115,3 +115,16 @@ document.querySelector('.scroll-btn').addEventListener('click', () => {
         document.querySelector('html').style.scrollBehavior = 'unset';
     }, 1000);
 });
+
+// Display the scroll up arrow after scrolling down the page
+mybutton = document.querySelector(".scroll-btn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    mybutton.style.display = "flex";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
