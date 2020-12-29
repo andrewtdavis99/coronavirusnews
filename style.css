@@ -141,9 +141,10 @@ footer {
     #navTitle {
         font-size: 20px;
     }
+}
 
 
-  @media (min-width: 1100px) { 
+@media (min-width: 1100px) { 
     #navTitle {
         font-size: 30px;
     }
