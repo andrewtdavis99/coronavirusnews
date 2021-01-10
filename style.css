@@ -1,12 +1,12 @@
 
-
- 
- 
-
 /* .advert {
     margin: 20px auto;
     text-align: center;
 } */
+
+.outer-container {
+    background-image: linear-gradient(to right, #bdc3c7, #c4e0e5);
+}
 
 #navPhoto {
     border-radius: 25px;
@@ -69,10 +69,10 @@
     width: 70%;
 }
 
-.advice li {
-    width: 70%;
-    margin-bottom: 5px;
+ul {
+    margin-bottom: 0;
 }
+
 
 footer {
     height: 60px;
