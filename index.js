@@ -9,13 +9,20 @@ document.querySelectorAll(".country").forEach(item => {
                 console.log(results)
                 let output = '<div class="row">';
                 // Loop through
-                results.slice(2).forEach(post => {
-                    // Check for image
+                results.forEach(post => {
+                    // Check if is a reddit user question
+                    console.log(post.selftext)
+                     if (!post.selftext == "") {
+                         return;
+                     } else {
+                    // Check for user image
                     const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
                     const postTitle = post.title;
                     const url = post.url;
-                    output += cards(image, postTitle, url);
-                    })
+        
+                    output +=   cards(image, postTitle, url);
+                     }
+                })
                 output += '</div> ';
                 document.getElementById('results').innerHTML = output;
             });
@@ -39,17 +46,26 @@ document.getElementById("tabNode").addEventListener("click", function (e) {
             console.log(results)
             let output = '<div class="row">';
             // Loop through
-            results.slice(2).forEach(post => {
+            results.forEach(post => {    
+                console.log(post.selftext)
+                // Check if is a reddit user question
+                 if (!post.selftext == "") {
+                     return;
+                 } else {
                 // Check for image
                 const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
                 const postTitle = post.title;
                 const url = post.url;
-                output += cards(image, postTitle, url);
+    
+                output +=   cards(image, postTitle, url);
+                 }
             })
             output += '</div> ';
             document.getElementById('results').innerHTML = output;
 
         });
+
+        $('#navbarNav').removeClass('show');
 
 });
 
@@ -69,12 +85,19 @@ search()
         console.log(results)
         let output = '<div class="row">';
         // Loop through
-        results.slice(2).forEach(post => {
-            // Check for image
+        results.forEach(post => {
+            // Check if is a reddit user question
+            console.log(post.selftext)
+             if (!post.selftext == "") {
+                 return;
+             } else {
+                 // Check for image
             const image = post.preview ? post.preview.images[0].source.url : 'https://cdn.pixabay.com/photo/2020/04/21/07/57/corona-5071972_960_720.jpg';
             const postTitle = post.title;
             const url = post.url;
+
             output +=   cards(image, postTitle, url);
+             }
         })
         output += '</div> ';
         document.getElementById('results').innerHTML = output;
