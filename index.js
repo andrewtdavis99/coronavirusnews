@@ -11,8 +11,8 @@ document.querySelectorAll(".country").forEach(item => {
                 // Loop through
                 results.forEach(post => {
                     // Check if is a reddit user question
-                    console.log(post.selftext)
-                     if (!post.selftext == "") {
+                     if (post.domain.substring(0,5) == "self.") {
+                         console.log(post.domain)
                          return;
                      } else {
                     // Check for user image
@@ -46,10 +46,10 @@ document.getElementById("tabNode").addEventListener("click", function (e) {
             console.log(results)
             let output = '<div class="row">';
             // Loop through
-            results.forEach(post => {    
-                console.log(post.selftext)
+            results.forEach(post => {
                 // Check if is a reddit user question
-                 if (!post.selftext == "") {
+                 if (post.domain.substring(0,5) == "self.") {
+                     console.log(post.domain)
                      return;
                  } else {
                 // Check for image
@@ -87,8 +87,8 @@ search()
         // Loop through
         results.forEach(post => {
             // Check if is a reddit user question
-            console.log(post.selftext)
-             if (!post.selftext == "") {
+             if (post.domain.substring(0,5) == "self.") {
+                 console.log(post.domain)
                  return;
              } else {
                  // Check for image
